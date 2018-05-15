@@ -6,7 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+using System.Data.Entity;
 namespace WebApp
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -18,6 +18,8 @@ namespace WebApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //Database.SetInitializer<DataBase.MySqlCon>(new DropCreateDatabaseIfModelChanges<DataBase.MySqlCon>());
+            Database.SetInitializer<DataBase.MySqlCon>(new DropCreateDatabaseIfModelChanges <DataBase.MySqlCon>());
         }
     }
 }

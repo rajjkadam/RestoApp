@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "AddCategories";
+}
+<form>
+    <div class="form-group">
+        <label for="Add Categories">Add Categories</label>
+        <input type="text" class="form-control" id="txtCatName" placeholder="Eneter the Categories" />
+    </div>
+    <div class="form-group">
+        <label for="Added Date">Date</label>
+        <input type="date" class="form-control" id="txtDate" placeholder="Select Date" />
+    </div>
+    <button type="submit" class="btn btn-primary" id="btnSubmitt">Submit</button>
+</form>
+   <div>@Html.ActionLink("List of Items", "Index")</div>
+@section Scripts{
+    <script src="~/Scripts/jquery-AddCategories.js"></script>
+}
